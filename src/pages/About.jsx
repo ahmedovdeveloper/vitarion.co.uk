@@ -383,7 +383,7 @@ export default function AboutPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#081b33] text-slate-300 text-sm">
+      <footer className="bg-white text-slate-300 text-sm">
         <div className="max-w-7xl mx-auto px-6 py-12 grid sm:grid-cols-2 lg:grid-cols-5 gap-8">
           <div>
             <div className="flex items-center gap-3 mb-3">
@@ -451,7 +451,7 @@ export default function AboutPage() {
             <h4 className="text-white font-semibold mb-3">Contact Us</h4>
             <ul className="space-y-2 text-xs text-slate-400">
               <li className="flex items-center gap-2">
-                <Phone size={12} /> 07770 517344
+                <Phone size={12} /> +44 7770 54 0202
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={12} /> info@vitarion.co.uk

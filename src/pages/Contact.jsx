@@ -46,7 +46,7 @@ const CONTACT_METHODS = [
   {
     Icon: Phone,
     label: "Telephone / WhatsApp",
-    value: "07770 517344",
+    value: "+44 7770 54 0202",
     note: "Monday to Friday: 09:00 – 17:30 (UK Time)",
   },
   {
@@ -359,19 +359,12 @@ export default function ContactPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#081b33] text-slate-300 text-sm">
+      <footer className="bg-white text-slate-300 text-sm">
         <div className="max-w-7xl mx-auto px-6 py-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center gap-3 mb-3">
               <LogoMark small />
-              <div>
-                <p className="font-extrabold text-white leading-none">
-                  VITARION LTD
-                </p>
-                <p className="text-[9px] tracking-[0.25em] text-teal-400 font-bold">
-                  UNITED KINGDOM
-                </p>
-              </div>
+            
             </div>
             <p className="text-xs text-slate-400 leading-relaxed mb-4">
               Global distribution for FMCG, FSMP, general nutrition and food
@@ -412,7 +405,7 @@ export default function ContactPage() {
             </h4>
             <ul className="space-y-2 text-xs text-slate-400">
               <li className="flex items-center gap-2">
-                <Phone size={14} /> 07770 517344
+                <Phone size={14} /> +44 7770 54 0202
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={14} /> info@vitarion.co.uk

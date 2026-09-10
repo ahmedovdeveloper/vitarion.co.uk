@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, ChevronDown } from "lucide-react";
+import { Phone, Mail, MapPin, ChevronDown, Menu, X } from "lucide-react";
 import vitarionLogo from "../assets/vitarion-logo.png";
 
 const NAV_LINKS = [
@@ -9,6 +9,7 @@ const NAV_LINKS = [
   { label: "Business Areas", to: "/business-areas" },
   { label: "Products", to: "/products" },
   { label: "Mimi Organics", to: "/mimi-organics" },
+  { label: "Wellgreen", to: "/wellgreen" },
   { label: "Partnerships", to: "/partnerships" },
   { label: "Quality & Compliance", to: "/quality-compliance" },
   { label: "Contact", to: "/contact" },
@@ -25,13 +26,15 @@ const ACCENT = {
  * accent: "teal" | "green" | "navy" — controls the active-link color per page theme
  */
 export default function SiteHeader({ active = "Home", accent = "teal" }) {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
   return (
     <>
       <div className="bg-[#0c2c4d] text-slate-200 text-xs">
         <div className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">
           <div className="flex items-center gap-6 flex-wrap">
             <span className="flex items-center gap-1.5">
-              <Phone size={14} /> 07770 517344
+              <Phone size={14} /> +44 7770 54 0202
             </span>
             <span className="hidden sm:flex items-center gap-1.5">
               <Mail size={14} /> info@vitarion.co.uk
@@ -48,18 +51,11 @@ export default function SiteHeader({ active = "Home", accent = "teal" }) {
       </div>
 
       <header className="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-100">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
+          <div className="flex items-center gap-3 min-w-0">
             <LogoMark />
-            <div>
-              <p className="text-xl font-extrabold tracking-tight text-[#0c2c4d] leading-none">
-                VITARION LTD
-              </p>
-              <p className="text-[10px] tracking-[0.25em] text-teal-600 font-bold">
-                UNITED KINGDOM
-              </p>
-            </div>
           </div>
+
           <nav className="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-600">
             {NAV_LINKS.map((link) => (
               <Link
@@ -75,19 +71,48 @@ export default function SiteHeader({ active = "Home", accent = "teal" }) {
               </Link>
             ))}
           </nav>
+
+          <button
+            type="button"
+            aria-label="Toggle navigation"
+            className="lg:hidden inline-flex items-center justify-center rounded-md border border-slate-200 p-2 text-slate-700"
+            onClick={() => setMobileOpen((prev) => !prev)}
+          >
+            {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
         </div>
+
+        {mobileOpen && (
+          <div className="lg:hidden border-t border-slate-100 bg-white">
+            <nav className="max-w-7xl mx-auto px-4 py-3 space-y-2 text-sm font-medium text-slate-700">
+              {NAV_LINKS.map((link) => (
+                <Link
+                  key={link.label}
+                  to={link.to}
+                  onClick={() => setMobileOpen(false)}
+                  className={
+                    link.label === active
+                      ? `block rounded-md bg-slate-100 px-3 py-2 ${ACCENT[accent].split(" ")[0]}`
+                      : "block rounded-md px-3 py-2 hover:bg-slate-50"
+                  }
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+        )}
       </header>
     </>
   );
 }
 
 export function LogoMark({ small }) {
-  const size = small ? "w-9 h-9" : "w-11 h-11";
   return (
     <img
       src={vitarionLogo}
       alt="VITARION LTD logo"
-      className={`${size} object-contain rounded-lg bg-white/90 p-1 shadow-sm ring-1 ring-slate-200`}
+      className="w-full h-20 object-contain"
     />
   );
 }

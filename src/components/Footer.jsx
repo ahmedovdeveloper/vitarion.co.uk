@@ -58,7 +58,7 @@ export default function SiteFooter({ columns, bg = "bg-[#081b33]" }) {
           </h4>
           <ul className="space-y-2 text-xs text-slate-400">
             <li className="flex items-center gap-2">
-              <Phone size={14} /> 07770 517344
+              <Phone size={14} /> +44 7770 54 0202
             </li>
             <li className="flex items-center gap-2">
               <Mail size={14} /> info@vitarion.co.uk

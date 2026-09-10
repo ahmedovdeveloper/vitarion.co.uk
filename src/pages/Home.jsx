@@ -362,7 +362,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="text-slate-200 text-sm space-y-3">
-            <p className="flex items-center gap-2"><Phone size={16} /> 07770 517344</p>
+            <p className="flex items-center gap-2"><Phone size={16} /> +44 7770 54 0202</p>
             <p className="flex items-center gap-2"><Mail size={16} /> info@vitarion.co.uk</p>
             <p className="flex items-start gap-2"><MapPin size={16} className="mt-0.5 shrink-0" /> 71–75 Shelton Street, Covent Garden, London WC2H 9JQ, United Kingdom</p>
           </div>

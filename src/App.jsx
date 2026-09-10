@@ -7,6 +7,7 @@ import ProductsCatalogPage from './pages/ProductsCatalog'
 import MimiOrganicsPage from './pages/Mimiorganicspage'
 import PartnershipsPage from './pages/Partnershipspage'
 import QualityCompliancePage from './pages/QC'
+import WellgreenPage from './pages/WellgreenPage'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/business-areas" element={<BusinessAreasPage />} />
         <Route path="/products" element={<ProductsCatalogPage />} />
         <Route path="/mimi-organics" element={<MimiOrganicsPage />} />
+        <Route path="/wellgreen" element={<WellgreenPage />} />
         <Route path="/partnerships" element={<PartnershipsPage />} />
         <Route path="/quality-compliance" element={<QualityCompliancePage />} />
         <Route path="/contact" element={<ContactPage />} />
