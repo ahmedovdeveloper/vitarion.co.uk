@@ -26,7 +26,8 @@ import {
 
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
-
+import LogoMark from "../assets/vitarion-logo.png";
+ 
 const IMAGES = {
   hero: "https://www.dropbox.com/scl/fi/hl6t6ey738tdrg6izikcw/content-2.png?rlkey=e97teqh2boj7lo53quxo6h8vl&st=knx1zxq5&raw=1",
   fmcg: "https://images.unsplash.com/photo-1704713911962-409fa07a4a3a?w=700&q=80&auto=format&fit=crop",

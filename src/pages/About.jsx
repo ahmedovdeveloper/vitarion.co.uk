@@ -18,7 +18,7 @@ import {
 } from "lucide-react"; 
 import Header from "../components/Header";
 import SiteHeader from "../components/Header";
-
+import LogoMark from "../assets/vitarion-logo.png";
 const IMAGES = {
   hero: mimiPreterm,
   handshake:
@@ -139,12 +139,6 @@ export default function AboutPage() {
             <p className="text-teal-600 font-semibold tracking-[0.2em] text-xs mb-3">
               ABOUT
             </p>
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-[#0b2544] leading-tight">
-              VITARION LTD
-            </h1>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-teal-500 mb-6">
-              United Kingdom
-            </h2>
             <p className="text-slate-600 leading-relaxed mb-4">
               A UK-based global distribution and trading company
               specialising in FMCG, FSMP, general nutrition and food
@@ -387,15 +381,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 py-12 grid sm:grid-cols-2 lg:grid-cols-5 gap-8">
           <div>
             <div className="flex items-center gap-3 mb-3">
-              <LogoMark small />
-              <div>
-                <p className="font-extrabold text-white leading-none">
-                  VITARION LTD
-                </p>
-                <p className="text-[9px] tracking-[0.2em] text-teal-400 font-semibold">
-                  UNITED KINGDOM
-                </p>
-              </div>
+              <img src={LogoMark} alt="VITARION LTD logo" className="w-full h-full object-contain" />
             </div>
             <p className="text-xs text-slate-400 leading-relaxed mb-4">
               Global distribution for FMCG, FSMP, general nutrition and food
@@ -502,19 +488,6 @@ function FooterColumn({ title, items }) {
           </li>
         ))}
       </ul>
-    </div>
-  );
-}
-
-function LogoMark({ small }) {
-  const size = small ? "w-8 h-8" : "w-10 h-10";
-  return (
-    <div
-      className={`${size} rounded-lg bg-gradient-to-br from-teal-500 to-[#0b2544] grid grid-cols-3 gap-[2px] p-1.5`}
-    >
-      {Array.from({ length: 9 }).map((_, i) => (
-        <span key={i} className="bg-white/80 rounded-[1px]" />
-      ))}
     </div>
   );
 }

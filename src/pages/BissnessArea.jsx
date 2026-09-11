@@ -34,7 +34,8 @@ import {
 
 import Header from "../components/Header";
 import SiteHeader from "../components/Header";
-
+import LogoMark from "../assets/vitarion-logo.png";
+ 
 /**
  * VITARION LTD — Business Areas page
  * React + Tailwind CSS
@@ -342,8 +343,7 @@ export default function BusinessAreasPage() {
         <div className="max-w-7xl mx-auto px-6 py-12 grid sm:grid-cols-2 lg:grid-cols-5 gap-8">
           <div>
             <div className="flex items-center gap-3 mb-3">
-              <LogoMark small />
-             
+              <img src={LogoMark} alt="VITARION LTD logo" className="w-full h-full object-contain" />
             </div>
             <p className="text-xs text-slate-400 leading-relaxed mb-4">
               Global distribution for FMCG, FSMP, general nutrition and food
@@ -565,20 +565,6 @@ function FooterColumn({ title, items }) {
           </li>
         ))}
       </ul>
-    </div>
-  );
-}
-
-function LogoMark({ small }) {
-  const size = small ? "w-9 h-9" : "w-11 h-11";
-  return (
-    <div
-      className={`${size} rounded-lg grid grid-cols-3 gap-[3px] p-2`}
-      style={{ background: "linear-gradient(135deg,#2dd4bf,#0c2c4d)" }}
-    >
-      {Array.from({ length: 9 }).map((_, i) => (
-        <span key={i} className="bg-white/85 rounded-[1px]" />
-      ))}
     </div>
   );
 }
