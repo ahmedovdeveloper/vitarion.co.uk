@@ -97,6 +97,59 @@ const CATEGORIES = [
   },
 ];
 
+const FEATURED_PRODUCT = {
+  title: "RICH OMEGOS",
+  subtitle: "Omega-3 • Astaxanthin • Vitamin E",
+  pack: "Food Supplement — 60 Soft Capsules",
+  description:
+    "Rich Omegos is a convenient one-a-day food supplement combining fish oil concentrate, astaxanthin and vitamin E.",
+  nutrientFacts: [
+    { label: "Fish oil concentrate", value: "1,230 mg" },
+    { label: "EPA", value: "221 mg" },
+    { label: "DHA", value: "148 mg" },
+    { label: "Astaxanthin", value: "6 mg" },
+    { label: "Vitamin E", value: "5 mg α-TE" },
+    { label: "NRV", value: "42%" },
+  ],
+  benefits: [
+    "Heart function — EPA and DHA contribute to the normal function of the heart. The beneficial effect is obtained with a daily intake of 250 mg EPA and DHA.",
+    "Protection from oxidative stress — Vitamin E contributes to the protection of cells from oxidative stress.",
+  ],
+  notes: [
+    "EPA and DHA are long-chain omega-3 fatty acids naturally found in fish oil. Each daily capsule of Rich Omegos provides a combined 369 mg of EPA and DHA.",
+    "Astaxanthin is a naturally occurring carotenoid. Rich Omegos provides 6 mg of astaxanthin from astaxanthin-rich oleoresin derived from the microalga Haematococcus pluvialis.",
+  ],
+  dailyIntake: [
+    "Adults: Take one soft capsule daily with food and water. Swallow the capsule whole.",
+    "Do not exceed the recommended daily intake.",
+  ],
+  importantInfo: [
+    "Food supplements should not be used as a substitute for a varied, balanced diet and a healthy lifestyle.",
+    "Keep out of reach of young children.",
+    "Not intended for persons under 18 years of age.",
+    "Consult a healthcare professional before use if you are pregnant or breastfeeding, taking anticoagulant or antiplatelet medication, have a medical condition, are receiving medical treatment or are scheduled for surgery.",
+    "Do not use if you are allergic to fish, soya or any other ingredient.",
+    "Discontinue use and seek professional advice if an adverse reaction occurs.",
+  ],
+  storage: [
+    "Store in a cool, dry place below 25°C. Protect from direct sunlight and excessive heat.",
+    "Keep the container or blister inside the original carton.",
+    "Do not use after the best-before date printed on the package.",
+    "Do not use if the packaging or protective seal is damaged.",
+  ],
+  ingredients: [
+    "Fish oil concentrate (FISH); soft-capsule shell (bovine gelatine, humectant: glycerol, purified water); astaxanthin preparation (medium-chain triglycerides, astaxanthin-rich oleoresin from Haematococcus pluvialis, antioxidant: mixed tocopherols); emulsifier: SOYA lecithin; beeswax; vitamin E (D-alpha-tocopherol); anti-caking agent: silicon dioxide; antioxidants: mixed tocopherols and rosemary extract.",
+    "Allergen information: For allergens, see ingredients in bold. Contains FISH and SOYA.",
+  ],
+  distributor: {
+    name: "Vitarion Ltd",
+    address: "Allied House, 29–39 London Road, Twickenham, TW1 3SZ, United Kingdom",
+    tel: "+44 (0)7770 541212",
+    email: "enquiries@vitarion.co.uk",
+    web: "www.vitarion.co.uk",
+  },
+};
+
 const WHY_PARTNER = [
   { Icon: Globe, label: "Global Market Access" },
   { Icon: ShieldCheck, label: "Quality Assurance" },
@@ -181,6 +234,119 @@ export default function ProductsPage() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Featured product detail */}
+      <section className="max-w-7xl mx-auto px-6 py-12">
+        <div className="rounded-[28px] border border-slate-200 bg-[#f8fbfc] p-6 md:p-8 shadow-sm">
+          <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
+            <div className="max-w-2xl">
+              <p className="text-teal-600 font-semibold tracking-[0.2em] text-[10px] mb-3">FEATURED PRODUCT</p>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#0c2c4d] mb-2">
+                {FEATURED_PRODUCT.title}
+              </h2>
+              <p className="text-lg font-semibold text-slate-700 mb-1">
+                {FEATURED_PRODUCT.subtitle}
+              </p>
+              <p className="text-sm text-slate-500 mb-5">{FEATURED_PRODUCT.pack}</p>
+              <p className="text-sm leading-relaxed text-slate-600 mb-6">
+                {FEATURED_PRODUCT.description}
+              </p>
+            </div>
+            <div className="lg:max-w-md w-full rounded-2xl bg-white border border-slate-200 p-5 shadow-sm">
+              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-slate-500 mb-3">Each soft capsule provides</p>
+              <div className="grid grid-cols-2 gap-3">
+                {FEATURED_PRODUCT.nutrientFacts.map(({ label, value }) => (
+                  <div key={label} className="rounded-xl bg-slate-50 border border-slate-100 p-3">
+                    <p className="text-[10px] uppercase tracking-[0.12em] text-slate-500">{label}</p>
+                    <p className="text-lg font-extrabold text-[#0c2c4d] mt-1">{value}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 grid lg:grid-cols-3 gap-6">
+            <div className="rounded-2xl bg-white border border-slate-200 p-5">
+              <h3 className="text-base font-extrabold text-[#0c2c4d] mb-3">Nutritional benefits</h3>
+              <ul className="space-y-3 text-sm text-slate-600 leading-relaxed">
+                {FEATURED_PRODUCT.benefits.map((item) => (
+                  <li key={item} className="flex gap-2">
+                    <span className="mt-1 text-teal-600">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="rounded-2xl bg-white border border-slate-200 p-5">
+              <h3 className="text-base font-extrabold text-[#0c2c4d] mb-3">What are EPA and DHA?</h3>
+              <ul className="space-y-3 text-sm text-slate-600 leading-relaxed">
+                {FEATURED_PRODUCT.notes.map((item) => (
+                  <li key={item} className="flex gap-2">
+                    <span className="mt-1 text-teal-600">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="rounded-2xl bg-white border border-slate-200 p-5">
+              <h3 className="text-base font-extrabold text-[#0c2c4d] mb-3">Recommended daily intake</h3>
+              <ul className="space-y-3 text-sm text-slate-600 leading-relaxed">
+                {FEATURED_PRODUCT.dailyIntake.map((item) => (
+                  <li key={item} className="flex gap-2">
+                    <span className="mt-1 text-teal-600">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-8 grid lg:grid-cols-2 gap-6">
+            <div className="rounded-2xl bg-white border border-slate-200 p-5">
+              <h3 className="text-base font-extrabold text-[#0c2c4d] mb-3">Important information</h3>
+              <ul className="space-y-3 text-sm text-slate-600 leading-relaxed">
+                {FEATURED_PRODUCT.importantInfo.map((item) => (
+                  <li key={item} className="flex gap-2">
+                    <span className="mt-1 text-amber-600">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="rounded-2xl bg-white border border-slate-200 p-5">
+              <h3 className="text-base font-extrabold text-[#0c2c4d] mb-3">Storage & ingredients</h3>
+              <ul className="space-y-3 text-sm text-slate-600 leading-relaxed">
+                {FEATURED_PRODUCT.storage.map((item) => (
+                  <li key={item} className="flex gap-2">
+                    <span className="mt-1 text-teal-600">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+                {FEATURED_PRODUCT.ingredients.map((item) => (
+                  <li key={item} className="flex gap-2">
+                    <span className="mt-1 text-teal-600">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-8 rounded-2xl bg-[#0c2c4d] p-5 text-white">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-teal-200 mb-2">Imported and distributed in the United Kingdom by</p>
+            <p className="text-2xl font-extrabold mb-1">{FEATURED_PRODUCT.distributor.name}</p>
+            <p className="text-sm text-slate-200">{FEATURED_PRODUCT.distributor.address}</p>
+            <div className="mt-4 grid sm:grid-cols-3 gap-3 text-sm text-slate-100">
+              <p>Tel: {FEATURED_PRODUCT.distributor.tel}</p>
+              <p>Email: {FEATURED_PRODUCT.distributor.email}</p>
+              <p>Web: {FEATURED_PRODUCT.distributor.web}</p>
+            </div>
+          </div>
         </div>
       </section>
 
