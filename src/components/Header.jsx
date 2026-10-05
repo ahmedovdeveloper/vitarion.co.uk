@@ -8,7 +8,6 @@ const NAV_LINKS = [
   { label: "About", to: "/about" },
   { label: "Business Areas", to: "/business-areas" },
   { label: "Products", to: "/products" },
-  { label: "Mimi Organics", to: "/mimi-organics" },
   { label: "Wellgreen", to: "/wellgreen" },
   { label: "Partnerships", to: "/partnerships" },
   { label: "Quality & Compliance", to: "/quality-compliance" },
@@ -40,8 +39,7 @@ export default function SiteHeader({ active = "Home", accent = "teal" }) {
               <Mail size={14} /> info@vitarion.co.uk
             </span>
             <span className="hidden md:flex items-center gap-1.5">
-              <MapPin size={14} /> 71–75 Shelton Street, Covent Garden,
-              London WC2H 9JQ, United Kingdom
+              <MapPin size={14} />  92A Bedfont Lane, Feltham, Middlesex TW14 9BP
             </span>
           </div>
           <div className="flex items-center gap-1.5 shrink-0">

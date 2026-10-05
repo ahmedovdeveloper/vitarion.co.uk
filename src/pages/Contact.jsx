@@ -66,7 +66,7 @@ const CONTACT_METHODS = [
   {
     Icon: MapPin,
     label: "Head Office Address",
-    value: "71–75 Shelton Street, Covent Garden, London WC2H 9JQ, United Kingdom",
+    value: "92A Bedfont Lane, Feltham, Middlesex TW14 9BP",
     note: null,
   },
 ];
@@ -414,8 +414,7 @@ export default function ContactPage() {
               </li>
               <li className="flex items-start gap-2">
                 <MapPin size={14} className="mt-0.5 shrink-0" />
-                71–75 Shelton Street, Covent Garden, London WC2H 9JQ, United
-                Kingdom
+                               92A Bedfont Lane, Feltham, Middlesex TW14 9BP
               </li>
             </ul>
           </div>

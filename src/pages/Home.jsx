@@ -239,13 +239,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Mimi Organics banner */}
+      {/* Supplements & Mimi Organics banner */}
   <section className="max-w-7xl mx-auto px-6 py-10">
   <div
     className="rounded-2xl p-8 grid grid-cols-1 lg:grid-cols-[auto_1fr_auto] gap-8 items-center"
     style={{ background: "linear-gradient(135deg,#f6f2fc,#f9f7fb)" }}
   >
-    {/* Логотип */}
     <div className="flex flex-col items-center lg:items-start">
       <div className="flex items-baseline gap-1">
         <span className="text-3xl font-extrabold" style={{ color: "#166534" }}>mimi</span>
@@ -255,13 +254,12 @@ export default function HomePage() {
       </span>
     </div>
 
-    {/* Центральный блок */}
     <div>
       <h3 className="text-lg font-extrabold text-purple-800 text-center mb-1">
-        Mimi Organics – Premium Nutrition Line
+        Supplements &amp; Mimi Organics
       </h3>
       <p className="text-sm text-slate-500 text-center mb-6">
-        Developed for infant, young-child and specialised nutrition categories.
+        Daily wellness, specialised nutrition and premium formula categories in one portfolio.
       </p>
 
       <div className="flex items-center justify-center flex-wrap gap-4 mb-7">
@@ -290,13 +288,15 @@ export default function HomePage() {
       </div>
 
       <div className="text-center">
-        <button className="inline-flex items-center gap-1 bg-purple-700 hover:bg-purple-800 transition-colors text-white font-semibold text-sm px-6 py-3 rounded-lg">
-          EXPLORE MIMI ORGANICS <ChevronRight size={16} />
-        </button>
+        <a
+          href="/products"
+          className="inline-flex items-center gap-1 bg-purple-700 hover:bg-purple-800 transition-colors text-white font-semibold text-sm px-6 py-3 rounded-lg"
+        >
+          EXPLORE PRODUCTS <ChevronRight size={16} />
+        </a>
       </div>
     </div>
 
-    {/* Карточка MIMI PRETERM */}
     <div className="bg-white rounded-xl p-5 shadow-sm flex items-start gap-4 max-w-xs">
       <Ribbon size={26} className="text-purple-700 shrink-0 mt-1" />
       <div>
@@ -365,14 +365,18 @@ export default function HomePage() {
           <div className="text-slate-200 text-sm space-y-3">
             <p className="flex items-center gap-2"><Phone size={16} /> +44 7770 54 0202</p>
             <p className="flex items-center gap-2"><Mail size={16} /> info@vitarion.co.uk</p>
-            <p className="flex items-start gap-2"><MapPin size={16} className="mt-0.5 shrink-0" /> 71–75 Shelton Street, Covent Garden, London WC2H 9JQ, United Kingdom</p>
+            <p className="flex items-start gap-2"><MapPin size={16} className="mt-0.5 shrink-0" /> 92A Bedfont Lane,
+
+Feltham, Middlesex
+
+TW14 9BP</p>
           </div>
         </div>
       </section>
 
       <SiteFooter
         columns={[
-          { title: "QUICK LINKS", items: ["About", "Business Areas", "Products", "Mimi Organics"] },
+          { title: "QUICK LINKS", items: ["About", "Business Areas", "Products"] },
           { title: "", items: ["Partnerships", "Quality & Compliance", "Contact", "Privacy Policy"] },
           { title: "", items: ["Terms of Use", "Cookie Policy"] },
         ]}

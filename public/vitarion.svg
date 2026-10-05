@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="900" viewBox="0 0 1800 900">
+<rect width="100%" height="100%" fill="white"/>
+<circle cx="220.00" cy="280.00" r="8.00" fill="#082247"/>
+<circle cx="256.83" cy="280.00" r="10.83" fill="#093A5A"/>
+<circle cx="299.33" cy="280.00" r="13.67" fill="#0A526B"/>
+<circle cx="347.50" cy="280.00" r="16.50" fill="#0C6979"/>
+<circle cx="401.33" cy="280.00" r="19.33" fill="#10828B"/>
+<circle cx="460.83" cy="280.00" r="22.17" fill="#219A9D"/>
+<circle cx="526.00" cy="280.00" r="25.00" fill="#3EB1AE"/>
+<circle cx="220.00" cy="350.00" r="8.00" fill="#082247"/>
+<circle cx="256.83" cy="350.00" r="10.83" fill="#093A5A"/>
+<circle cx="299.33" cy="350.00" r="13.67" fill="#0A526B"/>
+<circle cx="347.50" cy="350.00" r="16.50" fill="#0C6979"/>
+<circle cx="401.33" cy="350.00" r="19.33" fill="#10828B"/>
+<circle cx="460.83" cy="350.00" r="22.17" fill="#219A9D"/>
+<circle cx="526.00" cy="350.00" r="25.00" fill="#3EB1AE"/>
+<circle cx="220.00" cy="420.00" r="8.00" fill="#082247"/>
+<circle cx="256.83" cy="420.00" r="10.83" fill="#093A5A"/>
+<circle cx="299.33" cy="420.00" r="13.67" fill="#0A526B"/>
+<circle cx="347.50" cy="420.00" r="16.50" fill="#0C6979"/>
+<circle cx="401.33" cy="420.00" r="19.33" fill="#10828B"/>
+<circle cx="460.83" cy="420.00" r="22.17" fill="#219A9D"/>
+<circle cx="526.00" cy="420.00" r="25.00" fill="#3EB1AE"/>
+<rect x="596.0" y="240" width="6" height="220" rx="3" fill="#0C6979"/>
+<text x="650.0" y="364" font-family="Arial, Helvetica, sans-serif" font-size="122" font-weight="700" fill="#093A5A">VITARION LTD</text>
+<line x1="730.0" y1="413" x2="872.0" y2="413" stroke="#0C6979" stroke-width="4" stroke-linecap="round"/>
+<text x="898.0" y="436" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700" fill="#0C6979" letter-spacing="2">UNITED KINGDOM</text>
+<line x1="1366.0" y1="413" x2="1508.0" y2="413" stroke="#0C6979" stroke-width="4" stroke-linecap="round"/>
+</svg>
