@@ -5,11 +5,14 @@ import {
   ShieldCheck,
   FileText,
   CheckCircle2,
+  Eye,
 } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
+import { getProductViewStats } from "../utils/analytics";
 
 import stage1Front from "../assets/stage1-front.jpg";
 import stage2Front from "../assets/stage2-front.jpg";
@@ -117,7 +120,7 @@ const PRODUCT_LIBRARY = {
     category: "Supplements",
     title: "HIS GRADOR",
     subtitle: "An everyday men’s supplement with zinc, selenium, vitamins, omega 3 and selected botanicals.",
-    image: "https://www.dropbox.com/scl/fi/xdwgoef3j8n0gcdmny92z/HER-ELIONA-FOR-UK3D.png?rlkey=jqfduslvylewg9t3wb3n9czvw&raw=1",
+    image: "https://www.dropbox.com/scl/fi/l7wgcpyjc1q0zt0aljzuj/hisGRADOR-FOR-UK3D.png?rlkey=02ipxftlfnl78c6y0bb46p6a7&raw=1",
     imageAlt: "HIS GRADOR",
     description:
       "HIS GRADOR combines minerals and vitamins with fish oil, CoQ10, amino acids and Panax ginseng in one daily soft capsule. Each pack contains 60 capsules, providing 60 days at the recommended intake.",
@@ -391,6 +394,28 @@ const PRODUCT_LIBRARY = {
 export default function ProductPage() {
   const { slug } = useParams();
   const product = PRODUCT_LIBRARY[slug];
+  const [productStats, setProductStats] = useState({ views: 0, uniqueUsers: 0 });
+
+  useEffect(() => {
+    let isMounted = true;
+
+    const loadStats = async () => {
+      if (!slug) {
+        return;
+      }
+
+      const stats = await getProductViewStats(slug);
+      if (isMounted) {
+        setProductStats(stats);
+      }
+    };
+
+    loadStats();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [slug]);
 
   if (!product) {
     return (
@@ -420,7 +445,7 @@ export default function ProductPage() {
       : [
           "Manufactured by: TOP PHARM SERVICE LLC, Kamolot Mahalla, Yangi Street, House 90, Syrdarya District, Syrdarya Region, Republic of Uzbekistan.",
           "Imported and distributed in the United Kingdom by: Vitarion Ltd, Allied House, 29–39 London Road, Twickenham, TW1 3SZ, United Kingdom.",
-          "Customer enquiries: +44 (0)7770 541212 | enquiries@vitarion.co.uk | www.vitarion.co.uk",
+          "Customer enquiries: + +44 7770 54 0202| enquiries@vitarion.co.uk | www.vitarion.co.uk",
         ];
 
   return (
@@ -459,6 +484,13 @@ export default function ProductPage() {
                     View Document <Download size={16} />
                   </a>
                 )}
+              </div>
+
+              <div className="mt-6 flex flex-wrap gap-3">
+                <div className="inline-flex items-center gap-2 rounded-full border border-teal-200 bg-teal-50 px-3 py-2 text-sm font-semibold text-teal-800">
+                  <Eye size={16} />
+                  {productStats.views} views
+                </div>
               </div>
             </div>
           </div>
